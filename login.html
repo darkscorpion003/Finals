@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body style="background-color: #072227">
+
+        <div class="container">
+          <img src="pslogo.png" alt="Smiley face" height="100" width="120" style="margin-left: 910px; margin-top: 300px;">
+        <br>
+          <label style="margin-left: 810px; font-family: Yu Gothic; color: white;" for="uname"><b>Username: </b></label>
+          <input style="margin-top: 20px; height: 40px; font-family: Yu Gothic;" type="text" id="uname" placeholder="Enter Username" name="uname" required>
+        <br>
+        <br>
+          <label style="margin-left: 813px; font-family: Yu Gothic; color: white;" for="psw"><b>Password: </b></label>
+          <input style="height: 40px; font-family: Yu Gothic;" type="password" id="psw" placeholder="Enter Password" name="psw" required>
+      
+        </div>
+      
+            <button style="margin-left: 920px; margin-top: 30px; height: 40px; width: 100px; color: green; border-radius: 5px;" type="submit" id="loginbtn" onclick="login()">Login</button>
+          <button style="margin-left: 920px; margin-top: 5px; height: 40px; width: 100px; color: red; border-radius: 5px;" type="button" id="cancelbtn" onclick="cancelbtn()">Cancel</button>
+        </div>
+      
+      <script >
+          let uname,upass
+
+function login(){
+    uname=document.getElementById("uname").value
+    upass=document.getElementById("psw").value
+   if(uname=="" || upass==""){
+    window.alert("Enter Username or Password.");
+   }else{
+    
+    
+   if(uname=="admin" && upass=="1234"){
+    location.href = "adminhome.html";
+
+   }else{
+    window.alert("Invalid Login");
+   }
+   }
+}
+
+function cancelbtn(){
+    document.getElementById('uname').value = "";
+    document.getElementById('psw').value = "";
+    window.alert("Log in Cancelled");
+    //point to homepage
+}
+      </script>
+</body>
+</html>
