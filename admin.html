@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Mode</title>
+</head>
+<body style="background-color: #072227">
+    <h1 style="color: white; margin-left: 890px; margin-top: 100px; font-family: Yu Gothic;">ADMIN</h1>
+
+    <div style="height: 800px; width: 500px; background-color: #FFF8F3; margin-left: 700px; font-family: Yu Gothic; border-radius: 10px; box-shadow: 0px 0px 25px #303030; font-size: 18pt; ">
+
+    <button style="font-family: Yu Gothic; font-size: 15pt; border-radius: 10px; margin-left: 5px; margin-top: 3px; box-shadow: 0px 0px 3px #303030;" type="button" id="viewtable" onclick="viewTable()">Item List</button>
+    <div id="viewT"></div>
+
+    <a href="adminhome.html">
+        <button style="position: sticky; font-family: Yu Gothic; font-size: 15pt; border-radius: 10px; margin-left: 450px; margin-top: 10px; box-shadow: 0px 0px 3px #303030; " type="button" id="viewtable" ;>OK</button>
+    </a>
+
+  <script>
+      function viewTable(Products){
+
+var Products = [
+
+    {
+        "ProductID": 1,
+        "ProductName": "Spiderman Miles Morales",
+        "Console": "PS5",
+        "Price": 3000.00
+    },
+    {
+        "ProductID": 2,
+        "ProductName": "Crackdown 3",
+        "Console": "XBOX",
+        "Price": 3200.00
+    },
+    {
+        "ProductID": 3,
+        "ProductName": "Friday the 13th",
+        "Console": "XBOX",
+        "Price": 3200.00
+    },
+    {
+        "ProductID": 4,
+        "ProductName": "Watch Dogs 2",
+        "Console": "PS4",
+        "Price": 3200.00
+    },
+    {
+        "ProductID": 5,
+        "ProductName": "Until Dawn",
+        "Console": "PS4",
+        "Price": 3200.00
+    },
+    {
+        "ProductID": 6,
+        "ProductName": "Shadow 2",
+        "Console": "PS4",
+        "Price": 3200.00
+    },
+    {
+        "ProductID": 7,
+        "ProductName": "Minecraft",
+        "Console": "XBOX",
+        "Price": 3200.00
+    },
+    {
+        "ProductID": 8,
+        "ProductName": "Birth days",
+        "Console": "PS4",
+        "Price": 3200.00
+    },
+    {
+        "ProductID": 9,
+        "ProductName": "Uncharted 4",
+        "Console": "PS4",
+        "Price": 3200.00
+    },
+    {
+        "ProductID": 10,
+        "ProductName": "Horizon Zero Dawn",
+        "Console": "PS4",
+        "Price": 3200.00
+    }
+] 
+
+    var mainContainer = document.getElementById("viewT");
+    for (var i = 0; i < Products.length; i++) {
+      var div = document.createElement("div");
+      div.innerHTML = 'Product ' + Products[i].ProductID + ': ' + Products[i].ProductName + ' : ₱ ' + Products[i].Price;
+      mainContainer.appendChild(div);
+    }
+  
+}
+
+  </script>
+  </div>
+
+</body>
+</html>
